@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+
+    <!-- ── NAVBAR ── -->
+    <nav class="navbar">
+        <h1>Mi App</h1>
+        <a href="/logout" class="btn-logout">Cerrar sesión</a>
+    </nav>
+
+    <!-- ── CONTENIDO ── -->
+    <main class="main-content">
+
+        <div class="card-bienvenida">
+            <h2>¡Hola, <%= nombre %>!</h2>
+            <p>Has iniciado sesión correctamente. Bienvenido a tu dashboard.</p>
+        </div>
+
+        <div class="cards-grid">
+            <div class="card">
+                <div class="icono">👤</div>
+                <h3>Mi perfil</h3>
+                <p>Ver y editar información de tu cuenta.</p>
+            </div>
+            <div class="card">
+                <div class="icono">📊</div>
+                <h3>Estadísticas</h3>
+                <p>Revisa tu actividad reciente.</p>
+            </div>
+            <div class="card">
+                <div class="icono">⚙️</div>
+                <h3>Configuración</h3>
+                <p>Personaliza tu experiencia.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        &copy; 2026 API+BD — Práctica Ingeniería Web
+    </footer>
+
+</body>
+</html>

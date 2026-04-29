@@ -11,7 +11,7 @@ export const validateUser = (user) => {
     throw new Error('Correo inválido');
   }
 
-  if (!contrasena || contrasena.length < 20) {
+  if (!contrasena || contrasena.length < 6) {
     throw new Error('Hash de contraseña inválido');
   }
 

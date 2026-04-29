@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="/css/formStyles.css">
+</head>
+<body>
+
+<div class="container">  
+  <form action="/login" method="POST">
+
+    <!-- ERROR GENERAL -->
+    <% if (errorGeneral) { %>
+      <div class="error"><%= errorGeneral %></div>
+    <% } %>
+
+    <!-- Correo -->
+    <input 
+      type="email" 
+      name="correo" 
+      placeholder="Correo electrónico" 
+      value="<%= correo || '' %>"
+      required
+    >
+    <div class="error">
+      <%= errorCorreo || '' %>
+    </div>
+
+    <!-- Contraseña -->
+    <input 
+      type="password" 
+      name="contrasena" 
+      placeholder="Contraseña" 
+      required
+    >
+    <div class="error">
+      <%= errorPass || '' %>
+    </div>
+
+    <!-- Botón -->
+    <div class="btnContainer">
+      <button type="submit" class="submit">Iniciar Sesión</button>
+    </div>
+
+    <!-- Links -->
+    <div class="links">
+      <a href="/recuperar">¿Olvidaste tu contraseña?</a>
+      <a href="/registro">Crear cuenta</a>
+    </div>
+
+  </form>
+</div>
+
+</body>
+</html>

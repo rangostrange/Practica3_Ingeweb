@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+
+<link rel="stylesheet" href="/css/bienvenida.css">
+
+<div class="welcome-card">
+    <div class="avatar">✨</div>        
+    <h1>¡Hola, <span id="user-name"><%= nombre || 'Usuario' %></span>!</h1>        
+    <p>Es un placer tenerte de vuelta en nuestra plataforma.</p>
+    
+    <div class="actions">
+        <a href="/principal" class="btn-primary">Ir a la Pagina Principal</a>
+         <a href="/logout" class="btn-primary">Cerrar Sesion</a>
+    </div>
+</div>
+
+<%- include('../partials/footer') %>

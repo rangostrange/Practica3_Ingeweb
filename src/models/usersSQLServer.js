@@ -25,5 +25,18 @@ const result = await pool.request()
     SELECT SCOPE_IDENTITY() AS id;
   `);
   
+
+  
   return result.recordset[0].id;
+};
+
+export const findUserByEmail = async (email) => {
+  const pool = await getConnection();
+
+  const result = await pool
+    .request()
+    .input('Correo', email)
+    .query('SELECT * FROM users WHERE Correo = @Correo');
+
+  return result.recordset[0]; 
 };
