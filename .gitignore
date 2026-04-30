@@ -1,0 +1,5 @@
+# Ignore node modules, distribution files, environment variables, and package lock files
+node_modules/
+dist/
+.env
+package-lock.json
